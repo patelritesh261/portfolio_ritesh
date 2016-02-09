@@ -1,41 +1,62 @@
 <%- include partials/header.ejs %>
- <main class="container">
+<script>// <![CDATA[
+$(document).ready(function(){
+    var from,to,subject,text;
+    $("#send_email").click(function(){      
+        to=$("#to").val();
+        subject=$("#subject").val();
+        text=$("#content").val();
+        $("#message").text("Sending E-mail...Please wait");
+        $.get("localhost:3000/send",{to:to,subject:subject,text:text},function(data){
+        if(data=="sent")
+        {
+            $("#message").empty().html("
+
+Email is been sent at "+to+" . Please check inbox !
+
+");
+        }
+
+});
+    });
+});
+</script>
+ <div class="bg-3">
+    <main class="container ">
+       <div class="row">
+            <div class="col-lg-12" > 
     <h1>Contact US</h1>
-   <form class="form-horizontal" role="form" method="post" action="index.php">
+   <form class="form-horizontal" role="form" method="get" action="send">
     <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Name</label>
+        <label for="subject" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="First & Last Name" value="">
         </div>
     </div>
     <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">Email</label>
+        <label for="to" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+            <input type="email" class="form-control" id="to" name="to" placeholder="example@domain.com" value="">
         </div>
     </div>
     <div class="form-group">
-        <label for="message" class="col-sm-2 control-label">Message</label>
+        <label for="content" class="col-sm-2 control-label">Message</label>
         <div class="col-sm-10">
-            <textarea class="form-control" rows="4" name="message"></textarea>
+            <textarea class="form-control" id="content" rows="4" name="content"></textarea>
         </div>
     </div>
+    
     <div class="form-group">
-        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input id="send_email" name="send_email" type="submit" value="send" class="btn btn-primary">
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-10 col-sm-offset-2">
-            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
+        <span id="message"></span>
             <! Will be used to display an alert to the user>
         </div>
     </div>
 </form>
- </main>
+
 <%- include partials/footer.ejs %>
