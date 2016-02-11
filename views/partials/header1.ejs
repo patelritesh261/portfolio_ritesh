@@ -1,96 +1,89 @@
 <html>
-  <head>
-    <title><%= title %></title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="File name" content="Assignment-portfolio">
-     <meta name="Author's name" content="Ritesh Patel">
+   <head>
+      <title><%= title %></title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="File name" content="Assignment-portfolio">
+      <meta name="Author's name" content="Ritesh Patel">
       <meta name="web site name" content="http://demoportfolio.azurewebsites.net/">
-       <meta name="Description" content="create Portfolio site ">
-    <link rel='stylesheet' href='/Content/app.css' />
-    <!-css section-->
+      <meta name="Description" content="create Portfolio site ">
+      <link rel='stylesheet' href='/Content/app.css' />
+      <!-css section-->
       <link rel="stylesheet" href="Scripts/lib/bootstrap/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="Scripts/lib/bootstrap/dist/css/bootstrap-theme.min.css">
-   <link rel="stylesheet" href="Scripts/lib/font-awesome/css/font-awesome.min.css">
-  ` <!-- Custom CSS -->
-    <link href="/Content/full-slider.css" rel="stylesheet">
-  </head>
-  <body>
-  <!- start navigation -->
- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+      <link rel="stylesheet" href="Scripts/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="Scripts/lib/font-awesome/css/font-awesome.min.css">
+      ` <!-- Custom CSS -->
+      <link href="/Content/full-slider.css" rel="stylesheet">
+   </head>
+   <body>
+      <!- start navigation -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/"><img src="/images/logo.png" height=35/></a>
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="/"><img src="/images/logo.png" height=35/></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                      <li class="active"><a href="/"><i class="fa fa-home"></i> &nbsp;Home <span class="sr-only">(current)</span></a></li> 
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>               
-            <li><a href="/profilepage">Profile Page</a></li>
-            <li><a href="/contactus">Contact US</a></li>
-                </ul>
+               <ul class="nav navbar-nav">
+                  <li class="active"><a href="/"><i class="fa fa-home"></i> &nbsp;Home <span class="sr-only">(current)</span></a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/services">Services</a></li>
+                  <li><a href="/profilepage">Profile Page</a></li>
+                  <li><a href="/contactus">Contact US</a></li>
+               </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!- end navigation -->
-    <!- start header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
+         </div>
+         <!-- /.container -->
+      </nav>
+      <!- end navigation -->
+      <!- start header -->
+      <header id="myCarousel" class="carousel slide">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
+         </ol>
+         <!-- Wrapper for Slides -->
+         <div class="carousel-inner">
             <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/images/1.jpg');"></div>
-                <div class="carousel-caption">
-                    
-                </div>
+               <!-- Set the first background image using inline CSS below. -->
+               <div class="fill" style="background-image:url('/images/1.jpg');"></div>
+               <div class="carousel-caption">
+               </div>
             </div>
             <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/images/2.jpg');"></div>
-                <div class="carousel-caption">
-                  
-                </div>
+               <!-- Set the second background image using inline CSS below. -->
+               <div class="fill" style="background-image:url('/images/2.jpg');"></div>
+               <div class="carousel-caption">
+               </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('/images/3.jpg');"></div>
-                <div class="carousel-caption">
-                  
-                </div>
+               <!-- Set the third background image using inline CSS below. -->
+               <div class="fill" style="background-image:url('/images/3.jpg');"></div>
+               <div class="carousel-caption">
+               </div>
             </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-
-    </header>
-    <!-- end header -->
-    <!-- start main -->
-   <main class="container-fluid bg-1">
-       <div class="row">
-            <div class="col-lg-12" > 
-    
+         </div>
+         <!-- Controls -->
+         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+         <span class="icon-prev"></span>
+         </a>
+         <a class="right carousel-control" href="#myCarousel" data-slide="next">
+         <span class="icon-next"></span>
+         </a>
+      </header>
+      <!-- end header -->
+      <!-- start main -->
+      <main class="container-fluid bg-1">
+      <div class="row">
+      <div class="col-lg-12" >
